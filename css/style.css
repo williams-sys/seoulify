@@ -210,7 +210,7 @@ a.active{
 .button{
     position: absolute;
     width: 100%;
-    top: 90%;
+    bottom: 2vh;
 }
 
 .slick-dots {
