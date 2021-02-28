@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Exo+2:wght@600&family=Rajdhani&display=swap');
+a,p, .btn, .form-control{
+    font-family: 'Dosis', sans-serif;
+}
+h1, h3{
+    font-family: 'Exo 2', sans-serif;
+}
+h2, h4, h5{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+
+
+
+.ani-1{
+    animation-delay: 0.1s;
+}
+.ani-2{
+    animation-delay: 0.2s;
+}
+.ani-3{
+    animation-delay: 0.3s;
+}
+.ani-4{
+    animation-delay: 0.4s;
+}
+.ani-5{
+    animation-delay: 0.5s;
+
+}
+.ani-6{
+    animation-delay: 0.6s;
+
+}
+.ani-7{
+    animation-delay: 0.7s;
+
+}
+.ani-8{
+    animation-delay: 0.8s;
+
+}
+.ani-9{
+    animation-delay: 0.9s;
+
+}
+.ani-10{
+    animation-delay: 1.5s;
+
+}
+.ani-11{
+    animation-delay: 2s;
+
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 2001;
+    background-color: rgba(183, 155, 108, 0.34);
+    backdrop-filter: blur(5px);
+}
+
+header {
+    height: 8vh;
+}
+header a {
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+}
+.logo{
+    width: 55%;
+}
+.domrey-menu {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.domrey-menu li {
+    padding: 0 1em;
+}
+.domrey-menu li a {
+    font-family: 'Dosis', sans-serif;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+    font-size: 15px;
+    padding: 7px 13px;
+}
+.domrey-menu li a:hover {
+    background-color: #b79b6c;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.domrey-menu li a.active {
+    background-color: rgba(0, 0, 0, 0.84);
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+
+
+.line-1,
+.line-2,
+.line-3 {
+    width: 25px;
+    height: 0.1em;
+    background: #313131;
+}
+.line-2 {
+    margin: 0.3em 0;
+}
+.rotate-domrey-bars .line-1 {
+    transform: rotate(-405deg) translate(-5px, 3px);
+}
+.rotate-domrey-bars .line-2 {
+    opacity: 0;
+}
+.rotate-domrey-bars .line-3 {
+    transform: rotate(405deg) translate(-5px, -4px);
+}
+.domrey-bars {
+    cursor: pointer;
+    display: none;
+    z-index: 5;
+}
+.domrey-bars div {
+    transition: 0.5s;
+}
+
+/*Apply styles after scroll*/
+.scrolling-active{
+    background-color: rgba(212, 212, 212, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+    transition: 1s;
+}
+
+.scrolling-active  a{
+    color: #000000 !important;
+}
+
+a.active{
+    color: #ffffff !important;
+}
+/*Apply styles after scroll end*/
+
+
+
+.home-bg,.subscribe{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.fashion-txt{
+    border: 10px solid #32353C;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 10vh;
+}
+
+.home-bg-position{
+    position: absolute;
+    z-index: 500;
+}
+
+.down-icon{
+    font-size: 29px;
+    position: absolute;
+    bottom: 33px;
+    background: #ffff;
+    color: black;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.down-icon:hover{
+    background-color: #dbdbdb;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.line{
+    width: 50px;
+    height: 3px;
+    background-color:  #B79B6C;
+}
+
+.card{
+    border: none !important;
+}
+.card:focus{
+    outline: none !important;
+}
+.btn{
+    border-radius: 0;
+}
+.button{
+    position: absolute;
+    width: 100%;
+    bottom: 4%;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li {
+    width: 25px !important;
+    height: 5px !important;
+    background-color: transparent;
+    border: 1px solid #32353C;
+}
+
+.slick-dots li.slick-active {
+    width: 27px !important;
+    height: 7px !important;
+    background-color: #B79B6C !important;
+}
+.subscribe-card{
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 5% 15%;
+}
+
+.sub-height{
+    height: 60vh;
+}
+
+.blog-bg-1,.blog-bg-2,.blog-bg-3,.blog-bg-4{
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:98%;
+    height: 50vh;
+}
+
+.map{
+    width: 80%;
+}
+
+@media screen and (max-width: 576px){
+
+    .logo{
+        width: 50%;
+    }
+    header {
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+    .domrey-bars {
+        width: 25px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .domrey-menu li a {
+        text-decoration: none;
+        color: #000000;
+        transition: 0.3s ease;
+        font-size: 15px;
+        padding: 7px 13px;
+    }
+    .domrey-menu {
+        position: fixed;
+        padding-top: 15%;
+        padding-left: 0;
+        top: 0;
+        right: -50%;
+        width: 50%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        transition: 0.3s;
+        background: rgba(212, 212, 212, 0.95);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+    }
+    .domrey-menu li {
+        padding: 0;
+        margin: 1.5em 0;
+    }
+    .domrey-bars {
+        display: block;
+    }
+
+    .show-domrey-menu {
+        right: 0;
+    }
+
+
+
+    .fashion-txt{
+        font-size: 6vh;
+    }
+    .slick-dots{
+        bottom: -2vh;
+    }
+    .blog-bg-1,.blog-bg-2,.blog-bg-3,.blog-bg-4{
+        height: 14rem;
+    }
+    .map{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 780px){
+
+    .logo{
+        width: 50%;
+    }
+    header {
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+    .domrey-bars {
+        width: 25px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .domrey-menu li a {
+        text-decoration: none;
+        color: #000000;
+        transition: 0.3s ease;
+        font-size: 15px;
+        padding: 7px 13px;
+    }
+    .domrey-menu {
+        position: fixed;
+        padding-top: 15%;
+        padding-left: 0;
+        top: 0;
+        right: -50%;
+        width: 50%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        transition: 0.3s;
+        background: rgba(212, 212, 212, 0.95);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+    }
+    .domrey-menu li {
+        padding: 0;
+        margin: 1.5em 0;
+    }
+    .domrey-bars {
+        display: block;
+    }
+
+    .show-domrey-menu {
+        right: 0;
+    }
+
+
+
+
+
+    .blog-bg-1,.blog-bg-2,.blog-bg-3,.blog-bg-4{
+        height: 14rem;
+    }
+    .map{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1050px){
+    .blog-bg-1,.blog-bg-2,.blog-bg-3,.blog-bg-4{
+        height: 14rem;
+    }
+    .map{
+        width: 100%;
+    }
+}

@@ -1,0 +1,672 @@
+<!doctype html>
+<div class="loader-container">
+    <div class="loader">Loading...</div>
+</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seoulify</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon_80.ico" />
+    <style>
+        .loader-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:#b79b6c;
+            height: 100vh;
+            position: fixed;
+            width: 100%;
+            z-index: 2000;
+        }
+
+        .loader,
+        .loader:before,
+        .loader:after {
+            border-radius: 50%;
+        }
+        .loader {
+            color: #32353C;
+            font-size: 11px;
+            text-indent: -99999em;
+            margin: 55px auto;
+            position: relative;
+            width: 10em;
+            height: 10em;
+            box-shadow: inset 0 0 0 1em;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        .loader:before,
+        .loader:after {
+            position: absolute;
+            content: '';
+        }
+        .loader:before {
+            width: 5.2em;
+            height: 10.2em;
+            background: #b79b6c;
+            border-radius: 10.2em 0 0 10.2em;
+            top: -0.1em;
+            left: -0.1em;
+            -webkit-transform-origin: 5.1em 5.1em;
+            transform-origin: 5.1em 5.1em;
+            -webkit-animation: load2 2s infinite ease 1.5s;
+            animation: load2 2s infinite ease 1.5s;
+        }
+        .loader:after {
+            width: 5.2em;
+            height: 10.2em;
+            background: #b79b6c;
+            border-radius: 0 10.2em 10.2em 0;
+            top: -0.1em;
+            left: 4.9em;
+            -webkit-transform-origin: 0.1em 5.1em;
+            transform-origin: 0.1em 5.1em;
+            -webkit-animation: load2 2s infinite ease;
+            animation: load2 2s infinite ease;
+        }
+        @-webkit-keyframes load2 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes load2 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Exo+2:wght@600&family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="container-fluid wow animate__bounceInDown ani-1" id="nav">
+    <div class="row" >
+        <div class="container ">
+            <div class="row" >
+                <div class="col-12 header">
+                    <header class=" d-flex justify-content-between align-items-center">
+                        <div class="domrey-logo" >
+                            <img src="img/logo.svg" alt="" class="logo">
+                        </div>
+                        <div class="domrey-bars" id="domrey-bars">
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                        </div>
+                        <ul id="domrey-menu" class="domrey-menu">
+                            <li ><a id="link-home" class="active"  href="#home">Home</a></li>
+                            <li ><a id="link-arrival"   href="#arrival">New Arrival</a></li>
+                            <li ><a id="link-edition"  href="#edition">Limited Edition</a></li>
+                            <li ><a id="link-subscribe"  href="#subscribe">Subscribe</a></li>
+                            <li ><a id="link-blog"  href="#blog">Blog</a></li>
+                            <li ><a id="link-contact"  href="#contact">Contact</a></li>
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section id="home" class="container-fluid">
+        <div class="row min-vh-100">
+            <div class="col-12 home-bg-position">
+                <div class="d-flex justify-content-center align-items-center vh-100 text-center" >
+                    <div class="">
+                        <h5 class="text-white wow animate__fadeInUp ani-2">G E T &nbsp;&nbsp; Y O U R &nbsp;&nbsp; <br class="d-block d-md-none "> W A R D R O B E &nbsp;&nbsp; R E A D Y &nbsp;&nbsp; F O R</h5>
+                        <div class=" d-flex justify-content-center my-3">
+                            <h1 class="text-white fashion-txt font-weight-bolder px-2 wow animate__fadeInUp ani-3">F A S H I O N</h1>
+                        </div>
+                        <h3 class="text-white wow animate__fadeInUp ani-4">S A V I N G S</h3>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#arrival" class="feather-chevron-down down-icon shadow wow animate__fadeInUp ani-5"></a>
+                </div>
+            </div>
+
+            <div class="col-12 min-vh-100 p-0">
+                <div id="carouselExampleSlidesOnly" class="carousel slide min-vh-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active home-bg" style="background-image: url('img/Artboard – 5.svg')";>
+                            <div class="vh-100"></div>
+                        </div>
+                        <div class="carousel-item home-bg" style="background-image: url('img/Artboard – 6.svg')";>
+                            <div class="vh-100"></div>
+                        </div>
+                        <div class="carousel-item home-bg" style="background-image: url('img/Artboard – 8.svg')";>
+                            <div class="vh-100"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="arrival" class="container-fluid " style="background: #ffff;">
+        <div class="row ">
+            <div class="container mt-0 mt-md-5 ">
+                <div class="row mt-5 my-5 my-md-0">
+                    <div class="col-12 d-flex justify-content-center align-items-center pt-5 text-center">
+                        <div class="">
+                            <h3 class="m-0 wow animate__bounceInDown ani-1">N e w &nbsp; A r r i v a l</h3>
+                            <img src="img/line.svg" alt="" class="wow animate__fadeInUp ani-1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row min-vh-100" >
+                    <div class="col-12 col-md-4 d-flex justify-content-start justify-content-md-center align-items-center">
+                        <div class="">
+                            <h4 class="font-weight-light wow animate__fadeInUp ani-1">New Arrival 2021</h4>
+                            <h1 class="font-weight-bold py-3 wow animate__fadeInUp ani-2">Cotton textured <br>sweaters <br>from <span style="font-size: 5vh; color: #B79B6C;">$14.99</span></h1>
+                            <div class="btn btn-dark wow animate__fadeInUp ani-3">Go Shopping <i class="feather-chevron-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 mt-md-0 pricing-slide col-12 col-md-8 d-flex justify-content-center  align-items-center wow animate__fadeInUp ani-2">
+                        <div class="card mr-md-5 mr-0">
+                            <div class="card ">
+                                <img src="img/model.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Jackets & Coats</h5>
+                                <h5 class="font-weight-bold">Open-front coat</h5>
+                                <p><del>150.00$</del> 120.00$</p>
+                            </div>
+                        </div>
+                        <div class="card ml-md-5 ml-0">
+                            <div class="card ">
+                                <img src="img/model%202.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Jumpers & Cardigans</h5>
+                                <h5 class="font-weight-bold">Cable knitted neck sweater</h5>
+                                <p><del>70.00$</del> 68.00$</p>
+                            </div>
+                        </div>
+
+                        <div class="card mr-md-5 mr-0">
+                            <div class="card ">
+                                <img src="img/brown.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Jumpers & Cardigans</h5>
+                                <h5 class="font-weight-bold">Brown Button-up Coat</h5>
+                                <p><del>30.00$</del> 24.00$</p>
+                            </div>
+                        </div>
+                        <div class="card ml-md-5 ml-0">
+                            <div class="card ">
+                                <img src="img/white.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">T-shirt</h5>
+                                <h5 class="font-weight-bold">White Crew-neck T-shirt</h5>
+                                <p><del>60.00$</del> 53.00$</p>
+                            </div>
+                        </div>
+
+                        <div class="card mr-md-5 mr-0">
+                            <div class="card ">
+                                <img src="img/zip.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Hoodies</h5>
+                                <h5 class="font-weight-bold">Black Zip-up Hoodie</h5>
+                                <p><del>40.00$</del> 34.00$</p>
+                            </div>
+                        </div>
+                        <div class="card ml-md-5 ml-0">
+                            <div class="card ">
+                                <img src="img/sweater.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Jumpers & Cardigans</h5>
+                                <h5 class="font-weight-bold">Green Sweater</h5>
+                                <p><del>56.00$</del> 50.00$</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="edition" class="container-fluid " style="background: #D4D4D4;">
+        <div class="row ">
+            <div class="container mt-0 mt-md-5 ">
+                <div class="row mt-5 my-5 my-md-0">
+                    <div class="col-12 d-flex justify-content-center align-items-center pt-5 text-center">
+                        <div class="">
+                            <h3 class="m-0 wow animate__bounceInDown ani-1">L i m i t e d &nbsp; E d i t i o n</h3>
+                            <img src="img/line-2.svg" alt="" class="wow animate__fadeInUp ani-1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row min-vh-100 flex-row-reverse" >
+                    <div class="col-12 col-md-4 d-flex justify-content-start justify-content-md-center align-items-center">
+                        <div class="">
+                            <h4 class="font-weight-light wow animate__fadeInUp ani-1">New Arrival 2021</h4>
+                            <h1 class="font-weight-bold py-3 wow animate__fadeInUp ani-2">Soft & cozy <br>sweatshirts <br>from <span style="font-size: 5vh; color: #B79B6C;">$98.99</span></h1>
+                            <div class="btn btn-dark wow animate__fadeInUp ani-3">Go Shopping <i class="feather-chevron-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 mt-md-0 pricing-slide col-12 col-md-8 d-flex justify-content-center  align-items-center wow animate__fadeInUp ani-2">
+                        <div class="card mr-md-5 mr-0" style="background: #D4D4D4;">
+                            <div class="card ">
+                                <img src="img/bag.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Backpacks & accessories</h5>
+                                <h5 class="font-weight-bold">FW 2020 limited edition</h5>
+                                <p><del>150.00$</del> 120.00$</p>
+                            </div>
+                        </div>
+                        <div class="card ml-md-5 ml-0" style="background: #D4D4D4;">
+                            <div class="card ">
+                                <img src="img/Group%201.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Shoes & Sneakers</h5>
+                                <h5 class="font-weight-bold">3CE 2019 limited edition</h5>
+                                <p><del>75.00&</del> 68.00$</p>
+                            </div>
+                        </div>
+
+                        <div class="card mr-md-5 mr-0" style="background: #D4D4D4;">
+                            <div class="card ">
+                                <img src="img/yellow.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Backpacks & accessories</h5>
+                                <h5 class="font-weight-bold">Brown Leather Tote Bag</h5>
+                                <p><del>30.00$</del> 24.00$</p>
+                            </div>
+                        </div>
+                        <div class="card ml-md-5 ml-0" style="background: #D4D4D4;">
+                            <div class="card ">
+                                <img src="img/sneaker.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Shoes & Sneakers</h5>
+                                <h5 class="font-weight-bold">Close-up Sneaker</h5>
+                                <p><del>60.00$</del> 53.00$</p>
+                            </div>
+                        </div>
+
+                        <div class="card mr-md-5 mr-0" style="background: #D4D4D4;">
+                            <div class="card ">
+                                <img src="img/steel.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Backpacks & accessories</h5>
+                                <h5 class="font-weight-bold">Floral Flap Sling Bag</h5>
+                                <p><del>40.00$</del> 34.00$</p>
+                            </div>
+                        </div>
+                        <div class="card ml-md-5 ml-0" style="background: #D4D4D4;">
+                            <div class="card ">
+                                <img src="img/high.svg" class="" alt="" >
+                                <div class="button d-flex justify-content-between align-items-center px-3">
+                                    <div class="btn btn-dark">Save</div>
+                                    <div class="btn btn-dark">Quick view</div>
+                                </div>
+                            </div>
+                            <div class="pt-3">
+                                <h5 class="font-weight-light">Shoes & Sneakers</h5>
+                                <h5 class="font-weight-bold">White Heeled Shoes</h5>
+                                <p><del>60.00$</del> 50.00$</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="subscribe" class="container-fluid subscribe" style="background-image: url('img/bg.svg');">
+        <div class="row">
+            <div class="container mt-0 mt-md-5 ">
+                <div class="row mt-5 mt-5 my-md-0">
+                    <div class="col-12 d-flex justify-content-center align-items-center pt-5 text-center">
+                        <div class="">
+                            <h3 class="m-0 wow animate__bounceInDown ani-1">S u b s c r i b e </h3>
+                            <img src="img/line-3.svg" alt="" class="wow animate__fadeInUp ani-1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row sub-height" >
+                    <div class="col-12 d-flex justify-content-center align-items-center" style="height: 50vh;">
+                        <div class="text-center subscribe-card wow animate__fadeInUp ani-1">
+                            <h5 class="font-weight-bold wow animate__fadeInUp ani-5">Let’s stay in touch</h5>
+                            <p class="font-weight-light wow animate__fadeInUp ani-5">Enjoy 15% off your first order when you join our mailing list.</p>
+                            <form action="#" class="py-2 wow animate__fadeInUp ani-5">
+                                <div class="form-group d-flex ">
+                                    <input type="email" class="form-control" style="border-radius: 0 !important;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
+                                    <div class="btn btn-dark">Subscribe</div>
+                                </div>
+                            </form>
+                            <p class="font-weight-light wow animate__fadeInUp ani-5">We respect your privacy, so we never share your info.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="container-fluid mt-5 pt-md-5 pt-2">
+        <div class="row mt-5 mt-5 my-md-0">
+            <div class="col-12 d-flex justify-content-center align-items-center pt-5 text-center">
+                <div class="">
+                    <h3 class="m-0 wow animate__bounceInDown ani-1">B l o g </h3>
+                    <img src="img/line-4.svg" alt="" class="wow animate__fadeInUp ani-1">
+                </div>
+            </div>
+        </div>
+        <div class="row pb-3 pt-5" >
+            <div class="col-12 col-md-6 blog-bg-1 mb-3 mb-md-0 d-flex  align-items-center wow animate__fadeInUp ani-2" style="background-image: url('img/bg-2.svg');">
+                <div class="ml-2">
+                    <h4 class="font-weight-light text-white">SEOUL FASHION</h4>
+                    <h3 class=" py-md-3 py-1 text-white">3 Steps To Get That Quick Summer <br class="d-md-block d-none"> Glow Head To Toe</h3>
+                    <div class="btn btn-dark">Read More<i class="feather-chevron-right"></i></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 blog-bg-2 d-flex  align-items-center wow animate__fadeInUp ani-3" style="background-image: url('img/bg-3.svg');">
+                <div class="ml-2">
+                    <h4 class="font-weight-light text-white">SEOUL FASHION</h4>
+                    <h3 class=" py-md-3 py-1 text-white">Seoulify Pro Hijab <br class="d-md-block d-none"> Goes Global</h3>
+                    <div class="btn btn-dark">Read More<i class="feather-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pb-3 " >
+            <div class="col-12 col-md-6 blog-bg-3 mb-3 mb-md-0 d-flex  align-items-center wow animate__fadeInUp ani-2" style="background-image: url('img/bg-4.svg');">
+                <div class="ml-2">
+                    <h4 class="font-weight-light text-white">SEOUL FASHION & SUMMER</h4>
+                    <h3 class=" py-md-3 py-1 text-white">3 Steps To Get That Quick Summer<br class="d-md-block d-none">Glow Head To Toe</h3>
+                    <div class="btn btn-dark">Read More<i class="feather-chevron-right"></i></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 wow animate__fadeInUp ani-3" >
+                <div class="row d-flex" >
+                    <div class="col-md-6 col-6 blog-bg-4 d-flex  align-items-center" style="background-image: url('img/bg-5.svg');">
+                        <div class="ml-2">
+                            <h4 class="font-weight-light text-white">SEOUL FASHION</h4>
+                            <h3 class=" py-md-3 py-1 text-white">Awards Gala</h3>
+                            <div class="btn btn-dark">Read More<i class="feather-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-6 blog-bg-4 d-flex  align-items-center" style="background-image: url('img/bg-7.svg');">
+                        <div class="ml-2">
+                            <h4 class="font-weight-light text-white">SEOUL FASHION</h4>
+                            <h3 class=" py-md-3 py-1 text-white">Perfect Style</h3>
+                            <div class="btn btn-dark">Read More<i class="feather-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pb-5 px-2">
+            <div class="col-6 col-md-3 wow animate__fadeInUp ani-2" style="background: #B79B6C;border: 1px solid rgba(0,0,0,0.77)">
+                <div class="text-center py-3">
+                    <img src="img/Group%2012.svg" alt="">
+                    <h3 class="pt-3">Pickup at any Store</h3>
+                    <p class="font-weight-light">Free shipping on orders over $65</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 wow animate__fadeInUp ani-3" style="background: #B7B7B7;border: 1px solid rgba(0,0,0,0.77)">
+                <div class="text-center py-3">
+                    <img src="img/Group%2011.svg" alt="">
+                    <h3 class="pt-3">Free returns Items</h3>
+                    <p class="font-weight-light">30-days free return policy.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 wow animate__fadeInUp ani-2" style="background: #B79B6C;border: 1px solid rgba(0,0,0,0.77)">
+                <div class="text-center py-3">
+                    <img src="img/Group%2010.svg" alt="">
+                    <h3 class="pt-3">Secured payments</h3>
+                    <p class="font-weight-light">We accept all major credit cards.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 wow animate__fadeInUp ani-3" style="background: #B7B7B7;border: 1px solid rgba(0,0,0,0.77)">
+                <div class="text-center py-3">
+                    <img src="img/Group%209.svg" alt="">
+                    <h3 class="pt-3">Customer service</h3>
+                    <p class="font-weight-light">Top notch customer service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container-fluid " style="background: #32353C;">
+        <div class="row mt-5 pt-5 my-md-0">
+            <div class="col-12 d-flex justify-content-center align-items-center pt-5 text-center">
+                <div class="">
+                    <h3 class="m-0 text-white">C o n t a c t </h3>
+                    <img src="img/line-5.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row min-vh-100 ">
+            <div class="col-6 col-md-3">
+                <div class="py-5">
+                    <h4 class="text-uppercase text-white mb-4">Contact Info</h4>
+                    <div class="font-weight-light">
+                        <div  class="text-white-50 text-uppercase"><span class="font-weight-bold">Phone: &nbsp; </span>+4 (509) 120 6705</div>
+                        <br>
+                        <div  class="text-white-50 text-uppercase"><span class="font-weight-bold">Address: &nbsp; </span>1418 Riverwood Drive, Suite 3245 Cottonwood, CA 96052, United State</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="py-5">
+                    <h4 class="text-uppercase text-white mb-4">Get Help</h4>
+                    <div class="font-weight-light">
+                        <a href="#" class="text-white-50 text-uppercase">Delivery Information</a>
+                        <br> <br>
+                        <a href="#" class="text-white-50 text-uppercase">Sale Terms & Conditions</a>
+                        <br> <br>
+                        <a href="#" class="text-white-50 text-uppercase">Returns & Refunds</a>
+                        <br> <br>
+                        <a href="#" class="text-white-50 text-uppercase">Privacy Notice</a>
+                        <br><br>
+                        <a href="#" class="text-white-50 text-uppercase">Shopping FAQs</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="py-md-5 pt-0 ">
+                    <h4 class="text-uppercase text-white mb-4">Popular Categories</h4>
+                    <div class="font-weight-light">
+                        <a href="#" class="text-white-50 text-uppercase">Coats (45)</a>
+                        <br> <br>
+                        <a href="#" class="text-white-50 text-uppercase">Jeans (278)</a>
+                        <br> <br>
+                        <a href="#" class="text-white-50 text-uppercase">Tops (64)</a>
+                        <br> <br>
+                        <a href="#" class="text-white-50 text-uppercase">Sweaters (129)</a>
+                        <br><br>
+                        <a href="#" class="text-white-50 text-uppercase">Jackets (3)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="py-md-5 pt-0">
+                    <h4 class="text-uppercase text-white mb-4">Let’s stay in touch</h4>
+                    <div class="font-weight-light">
+
+                        <div class="form-group d-flex ">
+                            <input type="email" class="form-control" style="border-radius: 0 !important;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
+                            <div class="btn btn-secondary">Subscribe</div>
+                        </div>
+                        <p class="text-white-50 ">Keep up to date with our latest news and special offers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 d-flex justify-content-center mt-md-0 mt-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.9792762734314!2d96.1598197153703!3d16.77770662451635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ec91e8faaaab%3A0x7e3c9e47b88edcf0!2sMiMber%20Institute%20Of%20Management%20Studies!5e0!3m2!1sen!2smm!4v1586727270997!5m2!1sen!2smm" class="map" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        <hr style="background: rgba(255,255,255,0.41);">
+        <div class="row pb-3">
+            <div class="col-12">
+                <div class="d-md-flex  justify-content-between align-items-center">
+                    <p class="font-weight-light text-white-50">© 2019, Seoulify Website. Made with passion </p>
+                    <p class="font-weight-light text-white-50">All Rights Reserved. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/wow/wow.js"></script>
+<script src="vendor/way_point/jquery.waypoints.min.js"></script>
+<script>
+
+
+    $('.carousel').carousel({
+        interval: 2000,
+        pause: "false"
+    })
+
+    $(".pricing-slide").slick({
+        arrows:false,
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
+    wow = new WOW(
+        {
+            boxClass:     'wow',      // default
+            animateClass: 'animate__animated', // default
+            offset:       0,          // default
+            mobile:       true,       // default
+            live:         true        // default
+        }
+    )
+    wow.init();
+
+    $(window).on("load",function () {
+        $('.loader-container').fadeOut(500,function () {
+            $(this).remove();
+        });
+    });
+</script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
